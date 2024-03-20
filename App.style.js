@@ -12,13 +12,19 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   body: {
-    flex: 5,
-    backgroundColor: 'lightgreen',
+    // flex: 5,
+    backgroundColor: 'transparent',
     justifyContent: 'center',
+    padding: '10px',
     alignItems: 'center',
   },
   footer: {
-    flex: 0.5,
+    position: 'absolute',
+    bottom: 0,
+    top: 630,    
+    left: 0,
+    right: 0,
+    height: 50, // Hauteur du footer, à adapter selon vos besoins
     backgroundColor: 'lightcoral',
     justifyContent: 'center',
     alignItems: 'center',

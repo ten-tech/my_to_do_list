@@ -1,18 +1,33 @@
 import { StyleSheet } from "react-native";
 
 export const TaskItemCompoSty = StyleSheet.create({  
-  container: {
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-    borderRadius: 10,
-  },
   task: {
-    backgroundColor: 'lightgrey',
-    marginBottom: 10,
+    backgroundColor: '#00356B',
+    marginBottom: 5,
+    width: 310,
     padding: 10,
     borderRadius: 5,
   },
   taskText: {
-    color: 'black',
+    color: 'white',
+    textAlign: 'left',
+    width: 250  
+  }, 
+  view_: {
+    flexDirection: 'row', 
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+  }, 
+  completedTask: {
+    color: 'white',
+  }, 
+  taskDate: {
+    color: '#F0E68C',
+    textAlign: 'right',
+    position: 'absolute',
+    top: 10, 
+    right: 10, 
+    fontStyle: 'italic',
+    fontSize: 11,
   },
-  });
+});

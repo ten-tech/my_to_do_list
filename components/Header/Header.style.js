@@ -13,10 +13,13 @@ export const HeaderSty = StyleSheet.create({
     marginRight: 10,
   },
   title: {
-    fontSize: 30,
+    fontSize: 15,
     flexWrap: 'wrap',
+    textAlign: 'center',
+    width: 320,
     color: 'black',
     backgroundColor: 'lightgrey',
      borderRadius: 5,
+     fontStyle: 'italic'     
   },
 });

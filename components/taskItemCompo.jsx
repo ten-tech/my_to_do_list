@@ -1,15 +1,40 @@
-import { React } from "react";
+import React from "react";
+import { Text, TouchableOpacity, View } from "react-native";
 import { TaskItemCompoSty } from "./taskItemCompo.style";
-import { ScrollView, Text, TouchableOpacity } from "react-native";
 
-export function TaskItemCompo({ tasks }) {
+export function TaskItemCompo({ tasks, onUpdateTask, onDeleteTodo }) {
+  const handleToggleTask = (id) => {
+    onUpdateTask(id);
+  };
+
+  const handleDeleteTask = (id) => {
+    const todoToDelete = tasks.find(task => task.id === id);
+    onDeleteTodo(todoToDelete);
+  };
+
   return (
-    <ScrollView style={TaskItemCompoSty.container}>
-      {tasks.map((task) => (
-        <TouchableOpacity key={task.id} style={TaskItemCompoSty.task}>
-          <Text style={TaskItemCompoSty.taskText}>{task.task}</Text>
-        </TouchableOpacity>
-      ))}
-    </ScrollView>
+    <>
+      {tasks.length > 0 &&
+        tasks.map((task) => (
+          <TouchableOpacity
+            key={task.id}
+            style={[
+              TaskItemCompoSty.task,
+              task.completed && TaskItemCompoSty.completedTask,
+            ]}
+            onPress={() => handleToggleTask(task.id)}
+            onLongPress={() => handleDeleteTask(task.id)} // Ajout de l'événement onLongPress pour supprimer une tâche
+          >
+            <View style={TaskItemCompoSty.view_}>
+              <Text style={TaskItemCompoSty.taskText}>
+                {task.task}
+              </Text>
+              <Text style={TaskItemCompoSty.taskDate}>
+                {task.date ? task.date.toLocaleDateString() : ""}
+              </Text>
+            </View>
+          </TouchableOpacity>
+        ))}
+    </>
   );
 }

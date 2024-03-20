@@ -6,7 +6,7 @@ export const ButtonCompoSty = StyleSheet.create({
       padding: 10,
       height: 40,
       width: 100,
-      backgroundColor: 'skyblue',
+      backgroundColor: '#1F75FE',
       borderRadius: 5,
       alignItems: 'center',
       justifyContent: 'center',
