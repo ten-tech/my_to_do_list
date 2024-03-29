@@ -1,4 +1,4 @@
- Application ToDo List - Projet d'Apprentissage React Native -
+# Application ToDo List - Projet d'Apprentissage React Native -
 
  ## Aperçu
 Ceci est une application simple de liste de tâches développée avec React Native. Elle permet aux utilisateurs d'ajouter des tâches, de les marquer comme terminées, de les supprimer et de consulter l'historique des tâches terminées.
